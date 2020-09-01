@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js - first Page</title>
+	<!-- Local -->
+	<script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+
+	<div id="app">
+		{{ message }}
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message : 'Hello Vue!'
+			}
+		})
+
+	//app.message = "Hi Vue!";
+	</script>
+
+</body>
+</html>
