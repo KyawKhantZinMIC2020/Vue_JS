@@ -18,3 +18,9 @@ http://localhost:8080/
 -template(HTML)
 -script(JS)
 -style(CSS)
+
+=> UI
+	- bootstrap-vue (npm install vue bootstrap-vue bootstrap)
+
+=> Route
+	- vue-router (npm instal vue router)
