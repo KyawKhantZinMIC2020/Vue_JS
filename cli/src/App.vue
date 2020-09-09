@@ -2,9 +2,9 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
 
-<!-- navbar  -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./assets/logo.png" width="30" height="30" alt="" loading="lazy">
         </a>
@@ -20,10 +20,18 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/exercise">Exercise</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/cart">Cart
+                <span class="badge badge-danger" v-if="cartCount>0">{{cartCount}}</span>
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to='/orders'>Order</router-link>
+            </li>
           </ul>
         </div>
-        </div>
-      </nav>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -47,7 +55,13 @@
   export default {
     name: 'App',
     mounted(){
-      this.$router.replace('/testing')
+      //this.$router.replace('/testing')
+    },
+    computed:{
+      cartCount(){
+        this.$store.dispatch('getData')
+        return this.$store.state.cart.length
+      }
     }
   }
 </script>

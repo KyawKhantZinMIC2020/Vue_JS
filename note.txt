@@ -24,3 +24,11 @@ http://localhost:8080/
 
 => Route
 	- vue-router (npm instal vue router)
+
+=> Directory
+	- views
+		-.vue
+		- call in route
+	
+=>Using API
+	-npm install axios

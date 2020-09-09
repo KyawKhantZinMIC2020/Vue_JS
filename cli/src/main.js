@@ -14,9 +14,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import routers
 import router from './router.js'
 
+// import store
+import store from './store.js'
+
+
 Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
